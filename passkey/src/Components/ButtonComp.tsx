@@ -2,7 +2,7 @@ import {Button } from "@mui/material";
 
 type ButtonProps=  {
     keyNum: number;
-    value:string;
+    value:number; 
     clickEvent: () => void
 }
 

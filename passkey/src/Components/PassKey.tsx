@@ -3,68 +3,64 @@ import Box from '@mui/material/Box';
 import React, { useState } from 'react';
 import ButtonNum from './ButtonComp';
 
-
-
-
-
-
 export default function PassKeyPad() {
   const[pincode, setPinCode] = useState('')
-  const[b1] = useState('1') 
-  const[b2] = useState('2') 
-  const[b3] = useState('3') 
-  const[b4] = useState('4') 
-  const[b5] = useState('5') 
-  const[b6] = useState('6') 
-  const[b7] = useState('7') 
-  const[b8] = useState('8') 
-  const[b9] = useState('9') 
+  let buttonVal="";
 
   
   const handlerClickOne = () => {
-    console.log(b1); 
+    buttonVal = buttonVal + 1; 
+    console.log(buttonVal); 
   }
 
   const handlerClickTwo = () => {
-    console.log(b2); 
+    buttonVal = buttonVal + 2; 
+    console.log(buttonVal)
   }
   
   const handlerClickThree = () => {
-    console.log(b3); 
+    buttonVal = buttonVal + 3; 
+    console.log(buttonVal)
   }
 
   
   const handlerClickFour = () => {
-    console.log(b4); 
+    buttonVal = buttonVal + 4; 
+    console.log(buttonVal) 
   }
 
   const handlerClickFive = () => {
-    console.log(b5); 
+    buttonVal = buttonVal + 5; 
+    console.log(buttonVal) 
   }
 
   const handlerClickSix = () => {
-    console.log(b6); 
+    buttonVal = buttonVal + 6; 
+    console.log(buttonVal) 
   }
 
   const handlerClickSeven = () => {
-    console.log(b7); 
+    buttonVal = buttonVal + 7; 
+    console.log(buttonVal) 
   }
 
   const handlerClickEight = () => {
-    console.log(b8); 
+    buttonVal = buttonVal + 8; 
+    console.log(buttonVal) 
   }
 
   const handlerClickNine = () => {
-    console.log(b9); 
+    buttonVal = buttonVal + 9; 
+    console.log(buttonVal) 
   }
 
 
   const handleClick=(e: { preventDefault: () => void; })=>{
     e.preventDefault()
-    if(pincode==='0'){
-      alert('error!')
+    if(pincode===buttonVal){
+      alert('Pass Key Correct!')
     }else{
-      console.log(pincode)
+      alert('Wrong')
     }
 
   }
@@ -95,19 +91,19 @@ export default function PassKeyPad() {
 
       <Stack gap={1}>
             <Stack spacing={{xs:1, sm:1}}direction="row" justifyContent="center">
-                <ButtonNum keyNum={1} clickEvent={handlerClickOne} value={'b1'}/>
-                <ButtonNum keyNum={2} clickEvent={handlerClickTwo} value={'b2'}/>
-                <ButtonNum keyNum={3} clickEvent={handlerClickThree}value={'b3'}/>
+                <ButtonNum keyNum={1} clickEvent={handlerClickOne} value={1} />
+                <ButtonNum keyNum={2} clickEvent={handlerClickTwo} value={2}/>
+                <ButtonNum keyNum={3} clickEvent={handlerClickThree} value={3}/>
             </Stack>
             <Stack spacing={{xs:1, sm:1}} direction="row" justifyContent="center">
-              <ButtonNum keyNum={4} clickEvent={handlerClickFour} value={'b4'}/>
-              <ButtonNum keyNum={5} clickEvent={handlerClickFive} value={'b5'}/>
-              <ButtonNum keyNum={6} clickEvent={handlerClickSix} value={'b6'}/>
+              <ButtonNum keyNum={4} clickEvent={handlerClickFour} value={4}/>
+              <ButtonNum keyNum={5} clickEvent={handlerClickFive} value={5}/>
+              <ButtonNum keyNum={6} clickEvent={handlerClickSix} value={6}/>
             </Stack>
             <Stack spacing={{xs:1, sm:1}} direction="row" justifyContent="center" >
-                <ButtonNum keyNum={7} clickEvent={handlerClickSeven} value={'b7'}/>
-                <ButtonNum keyNum={8} clickEvent={handlerClickEight} value={'b8'}/>
-                <ButtonNum keyNum={9} clickEvent={handlerClickNine}value={'b9'}/>
+                <ButtonNum keyNum={7} clickEvent={handlerClickSeven} value={7}/>
+                <ButtonNum keyNum={8} clickEvent={handlerClickEight} value={8}/>
+                <ButtonNum keyNum={9} clickEvent={handlerClickNine} value={9}/>
             </Stack>
             
           </Stack>
