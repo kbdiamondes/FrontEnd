@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
 import {Box, Button, TextField} from '@mui/material'
-type cons1 = {
- title:string; 
- date:string; 
- status:string; 
-}
-
-
-
 export default function CustomApp(){ 
     const [type, setTypeKey] = useState(''); 
     let UserRead = type; 
@@ -23,18 +15,18 @@ export default function CustomApp(){
     const UserArea = (event:React.ChangeEvent<HTMLInputElement>) => {
         setTypeKey(event.target.value); 
         setUsername(event.target.value); 
-        UserRead = type; 
+        UserRead = username; 
     }
 
     const PassArea = (event:React.ChangeEvent<HTMLInputElement>) => {
         setTypeKey(event.target.value); 
         setPassword(event.target.value); 
-        PassRead = type; 
+        PassRead = password; 
     }
 
     function validUser(user:string, password: string){
-        if (user === "admin" && password === "admin"){
-            alert("Login success!"); 
+        if (user === "admin" && password === "123"){
+            alert("Welcome back " + user); 
             setUsername(''); 
             setPassword('');
         }else{
