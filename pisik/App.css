@@ -1,0 +1,34 @@
+
+.Home {
+    border: solid black 1px;
+    width: 65%;
+    position: absolute;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.Task {
+    padding-left: 10px;
+    border: solid gray 1px;
+    border-right-color: black;
+    width:  69.5%;
+    height: 827px;
+    margin: 0;
+    float: left;
+}
+
+.HighQueue {
+    border: solid red 1px;
+    width: 27.5%;
+    float: right;
+    margin-bottom: 1px;
+    height: 203.5px;
+}
+
+.Queue {
+    border: solid black 1px;
+    width: 27.5%;
+    float: right;
+    margin-bottom: 2px;
+    height: 203.5px;
+}
